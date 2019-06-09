@@ -2,14 +2,9 @@ package com.diplom.fileserver.rest;
 
 import com.diplom.fileserver.dto.ShortVideoDescription;
 import com.diplom.fileserver.dto.VideoMetadataDto;
-import com.diplom.fileserver.exception.FileServerException;
 import com.diplom.fileserver.service.FileService;
 import lombok.RequiredArgsConstructor;
-import org.apache.commons.io.IOUtils;
-import org.apache.tomcat.util.http.fileupload.FileItemIterator;
-import org.apache.tomcat.util.http.fileupload.FileItemStream;
 import org.apache.tomcat.util.http.fileupload.FileUploadException;
-import org.apache.tomcat.util.http.fileupload.servlet.ServletFileUpload;
 import org.springframework.core.io.support.ResourceRegion;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.ResponseEntity;
@@ -21,10 +16,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.servlet.http.HttpServletRequest;
-import java.io.FileOutputStream;
 import java.io.IOException;
-import java.io.InputStream;
-import java.io.OutputStream;
 import java.util.List;
 
 @RestController
